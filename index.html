@@ -2,127 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        html,
-body {
-  height: 100%;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
 
-body {
-  align-items: center;
-  background: #f4f7ff;
-  color: #000;
-  display: flex;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 100;
-  justify-content: center;
-  line-height: 1.5;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-}
+    body {
+      align-items: center;
+      background: #f4f7ff;
+      color: #000;
+      display: flex;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 100;
+      justify-content: center;
+      line-height: 1.5;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+    }
 
-canvas {
-  height: 100%;
-  left: 0;
- position: absolute;
-  top: 0;
-  width: 100%;
-  pointer-events: none;
-}
-
-
-
-.text-container {
-  max-width: 420px;
-  width: 90%;
-}
-
-h1 {
-  font-size: 22px;
-}
-
-p {
-  font-size: 13px;
-}
-
-/* Website Link */
-.website-link {
-  background: #f8faff;
-  border-radius: 50px 0 0 50px;
-  bottom: 30px;
-  color: #324b77;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  height: 34px;
-  filter: drop-shadow(2px 3px 4px rgba(#000, .1));
-  text-decoration: none;
-}
-
-.btn, i {
-    margin-bottom: 10px;
-}
+    canvas {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      pointer-events: none;
+    }
 
 
 
+    .text-container {
+      max-width: 420px;
+      width: 90%;
+    }
 
-    </style>
-    <!-- Font Awesome -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-rel="stylesheet"
-/>
-<!-- Google Fonts -->
-<link
-href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-rel="stylesheet"
-/>
-<!-- MDB -->
-<link
-href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css"
-rel="stylesheet"
-/>
-    <title>Social Share</title>
+    h1 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    /* Website Link */
+    .website-link {
+      background: #f8faff;
+      border-radius: 50px 0 0 50px;
+      bottom: 30px;
+      color: #324b77;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      height: 34px;
+      filter: drop-shadow(2px 3px 4px rgba(#000, .1));
+      text-decoration: none;
+    }
+
+    .btn,
+    i {
+      margin-bottom: 10px;
+    }
+  </style>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css" rel="stylesheet" />
+  <title>Social Share</title>
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
-    <div class="page-wrap">
-        <table>
-            <tr>
-                <td style="padding-right: 10px;"><i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></td>
-                <td><a href="https://www.instagram.com/fairuzulum/" class="website-link"><button class="btn " style="background-color: #ac2bac; color: white; width: 190px;  ">My Instagram</button></a></td>
-            </tr>
-            <tr>
-                <td style="padding-right: 10px;"><i class="fab fa-github fa-2x" style="color: #333333;"></i></td>
-                <td><a href="https://github.com/fairuzulum" class="website-link"><button class="btn" style="background-color: #333333; color: white; width: 190px;">My Github</button></a></td>
-            </tr>
-            <tr>
-                <td style="padding-right: 10px;"><i class="fab fa-linkedin fa-2x" style="color: #0082ca;"></i></td>
-                <td><a href="#" class="website-link"><button class="btn" style="background-color: #0082ca; color: white; width: 190px;">My Linkedin</button></a></td>
-            </tr>
-            <tr>
-              <td style="padding-right: 10px;"><i class="fab fa-medium fa-2x" style="color: #292727;"></i></td>
-              <td><a href="https://medium.com/@fairuzulum" class="website-link"><button class="btn" style="background-color: #1a1818; color: white; width: 190px;">My Medium</button></a></td>
-            </tr>
-            <tr>
-                <td style="padding-right: 10px;"><i class="fab fa-stack-overflow fa-2x" style="color: #ffac44;"></i></td>
-                <td><a href="https://stackoverflow.com/users/16497199/fairuz-ulum" class="website-link"><button class="btn" style="background-color: #ffac44; color: white; width: 190px;">My Stack Overflow</button></a></td>
-            </tr>
-        </table>
-    </div>
-   
+  <canvas id="canvas"></canvas>
+  <div class="page-wrap">
+    <table>
+      <tr>
+        <td style="padding-right: 10px;"><i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></td>
+        <td><a href="https://www.instagram.com/fairuzulum/" class="website-link"><button class="btn "
+              style="background-color: #ac2bac; color: white; width: 190px;  ">My Instagram</button></a></td>
+      </tr>
+      <tr>
+        <td style="padding-right: 10px;"><i class="fab fa-github fa-2x" style="color: #333333;"></i></td>
+        <td><a href="https://github.com/fairuzulum" class="website-link"><button class="btn"
+              style="background-color: #333333; color: white; width: 190px;">My Github</button></a></td>
+      </tr>
+      <tr>
+        <td style="padding-right: 10px;"><i class="fab fa-linkedin fa-2x" style="color: #0082ca;"></i></td>
+        <td><a href="https://www.linkedin.com/in/fairuzulum" class="website-link"><button class="btn"
+              style="background-color: #0082ca; color: white; width: 190px;">My Linkedin</button></a></td>
+      </tr>
+      <tr>
+        <td style="padding-right: 10px;"><i class="fab fa-medium fa-2x" style="color: #292727;"></i></td>
+        <td><a href="https://medium.com/@fairuzulum" class="website-link"><button class="btn"
+              style="background-color: #1a1818; color: white; width: 190px;">My Medium</button></a></td>
+      </tr>
+      <tr>
+        <td style="padding-right: 10px;"><i class="fab fa-stack-overflow fa-2x" style="color: #ffac44;"></i></td>
+        <td><a href="https://stackoverflow.com/users/16497199/fairuz-ulum" class="website-link"><button class="btn"
+              style="background-color: #ffac44; color: white; width: 190px;">My Stack Overflow</button></a></td>
+      </tr>
+    </table>
+  </div>
 
-    <!-- Website Corner Link -->
-   
 
-    <script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"
-></script>
+  <!-- Website Corner Link -->
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
 
 </body>
 
